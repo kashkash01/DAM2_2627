@@ -8,16 +8,10 @@ public class Mitico implements Brawler {
         this.vida = vida;
         this.potencia = potencia;
     }
-
-    public String getNombre() { return nombre; }
-    public int getVida() { return vida; }
-    public int getPotencia() { return potencia; }
-
     @Override
     public void atacar() {
-        System.out.println(nombre + " [Mítico] lanza un ataque especial causando " + potencia + " de daño.");
+        System.out.println(nombre + " lanza un ataque especial causando " + potencia + " de daño.");
     }
-
     @Override
     public void recargar() {
         System.out.println(nombre + " canaliza energía para recargar (Vida actual: " + vida + " HP).");
