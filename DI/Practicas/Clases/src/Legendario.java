@@ -16,6 +16,6 @@ public class Legendario implements Brawler {
     }
     @Override
     public void recargar() {
-        System.out.println(nombre + " recarga (Vida actual: " + vida + " HP).");
+        System.out.println(nombre + " recarga (Vida actual: " + vida + " HP). [Copas: " + copas + "]");
     }
 }
