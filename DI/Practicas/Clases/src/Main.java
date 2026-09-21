@@ -4,11 +4,11 @@ public class Main {
         Legendario leon = new Legendario("Leon", 3200, 960);
         Legendario spike = new Legendario("Spike", 2800, 1120);
 
-        //Míticos
+        //Mticos
         Mitico mortis = new Mitico("Mortis", 3800, 900);
         Mitico tara = new Mitico("Tara", 3400, 840);
 
-        //Épicos
+        //Epicos
         Epico piper = new Epico("Piper", 2400, 1500);
         Epico edgar = new Epico("Edgar", 3000, 1000);
 
