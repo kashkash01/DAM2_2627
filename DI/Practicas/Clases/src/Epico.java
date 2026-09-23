@@ -1,21 +1,19 @@
-public class Epico implements Brawler {
-    private String nombre;
-    private int vida;
-    private int potencia;
-    private int copas;
+public class Epico extends Brawler {
+    private int suministros;
 
-    public Epico(String nombre, int vida, int potencia,  int copas) {
-        this.nombre = nombre;
-        this.vida = vida;
-        this.potencia = potencia;
-        this.copas = copas;
+    public Epico(String name, int health, int suministros) {
+        super(name, health);
+        this.suministros = suministros;
     }
-    @Override
-    public void atacar() {
-        System.out.println(nombre + " dispara haciendo " + potencia + " de daño.");
+
+    public int getSuministros() {
+        return suministros;
     }
+
     @Override
-    public void recargar() {
-        System.out.println(nombre + " recarga (Vida actual: " + vida + " HP). [Copas: " + copas + "]");
+    public void actionByCategory(Brawler target) {
+        increaseHealth(suministros);
+        System.out.println(this + " Increase health to " + getHealth());
+        System.out.println(target);
     }
 }

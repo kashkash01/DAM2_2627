@@ -1,21 +1,19 @@
-public class Legendario implements Brawler {
-    private String nombre;
-    private int vida;
-    private int potencia;
-    private int copas;
+public class Legendario extends Brawler {
+    private int dano;
 
-    public Legendario(String nombre, int vida, int potencia, int copas) {
-        this.nombre = nombre;
-        this.vida = vida;
-        this.potencia = potencia;
-        this.copas = copas;
+    public Legendario(String name, int health, int dano) {
+        super(name, health);
+        this.dano = dano;
     }
-    @Override
-    public void atacar() {
-        System.out.println(nombre + " ataca con su ulti y hace " + potencia + " de daño.");
+
+    public int getDano() {
+        return dano;
     }
+
     @Override
-    public void recargar() {
-        System.out.println(nombre + " recarga (Vida actual: " + vida + " HP). [Copas: " + copas + "]");
+    public void actionByCategory(Brawler target) {
+        target.reduceHealth(dano);
+        System.out.println(this + " Apply -" + dano + " damage to " + target.getName());
+        System.out.println(target);
     }
 }
