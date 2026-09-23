@@ -15,7 +15,6 @@ public abstract class Brawler {
         return health;
     }
 
-    // Métodos para encapsular la salud y evitar get/set directos
     public void reduceHealth(int damage) {
         this.health -= damage;
     }
@@ -23,8 +22,6 @@ public abstract class Brawler {
     public void increaseHealth(int supply) {
         this.health += supply;
     }
-
-    // Acción polimórfica según la categoría
     public abstract void actionByCategory(Brawler target);
 
     @Override

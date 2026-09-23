@@ -1,19 +1,19 @@
 public class Legendario extends Brawler {
-    private int dano;
+    private int damage;
 
-    public Legendario(String name, int health, int dano) {
+    public Legendario(String name, int health, int damage) {
         super(name, health);
-        this.dano = dano;
+        this.damage = damage;
     }
 
-    public int getDano() {
-        return dano;
+    public int getDamage() {
+        return damage;
     }
 
     @Override
     public void actionByCategory(Brawler target) {
-        target.reduceHealth(dano);
-        System.out.println(this + " Apply -" + dano + " damage to " + target.getName());
+        target.reduceHealth(damage);
+        System.out.println(this + " Apply -" + damage + " damage to " + target.getName());
         System.out.println(target);
     }
 }

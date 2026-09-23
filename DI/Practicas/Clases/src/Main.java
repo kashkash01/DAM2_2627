@@ -9,11 +9,11 @@ public class Main {
         int opcion;
 
         do {
-            System.out.println("1. Ver brawlers");
-            System.out.println("2. Crear brawler legendario");
-            System.out.println("3. Crear brawler épico");
-            System.out.println("4. Combatir");
-            System.out.println("5. Salir");
+            System.out.println("1.Ver brawlers");
+            System.out.println("2.Crear brawler legendario");
+            System.out.println("3.Crear brawler épico");
+            System.out.println("4.Combatir");
+            System.out.println("5.Salir");
             System.out.println();
 
             System.out.print("OPCION: ");
