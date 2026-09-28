@@ -1,6 +1,6 @@
 public abstract class Brawler {
 
-    //Atributos privados comunes a cualquier brawler para asegurar el encapsulamiento
+    //Atributos privados comunes a cualquier brawler
     private String name;
     private int health;
 
@@ -20,7 +20,7 @@ public abstract class Brawler {
         return health;
     }
 
-    //Metodo para restar vida al brawler cuando recibe daño sin usar setters genéricos
+    //Metodo para restar vida al brawler cuando recibe daño
     public void reduceHealth(int damage) {
         this.health -= damage;
     }
@@ -30,10 +30,10 @@ public abstract class Brawler {
         this.health += supply;
     }
 
-    //Metodo abstracto obligatorio que define la acción en combate; cada subclase lo implementa a su manera
+    //define la acción en combate
     public abstract void actionByCategory(Brawler target);
 
-    //Sobrescribe toString para mostrar el formato de salida requerido: [Nombre:Vida]
+    //muestra el formato de salida requerido: [Nombre:Vida]
     @Override
     public String toString() {
         return "[" + name + ":" + health + "]";
