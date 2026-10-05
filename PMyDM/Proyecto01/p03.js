@@ -31,3 +31,13 @@ for (; saldo > 0;) {
     meses++;
 }
 console.log("Meses: " + meses);
+
+const numeros = [10, 20, 30, 40, 50];
+const numerosDobles = numeros.map(n => n * 2);
+
+console.log(numeros);
+console.log(numerosDobles);
+
+const marcasCoches = ["Toyota", "Honda", "Ford", "Chevrolet"]; 
+const marcasCochesSL = marcasCoches.map(marca => marca + " SL");
+console.log(marcasCochesSL);
