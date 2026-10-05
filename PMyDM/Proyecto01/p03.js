@@ -52,3 +52,18 @@ console.log(marcasConA);
 
 const primeraMarcaLarga = marcasCoches.find(marca => marca.length > 4);
 console.log(primeraMarcaLarga);
+
+const suma = numeros.reduce((acumulador, valorActual) => acumulador + valorActual, 0);
+console.log(suma);
+
+const producto = numeros.reduce((acumulador, valorActual) => acumulador * valorActual, 1);
+console.log(producto);
+
+// el numero maximo con reduce
+
+const maximo = numeros.reduce((acumulador, valorActual) => {
+    return valorActual > acumulador ? valorActual : acumulador;
+}, 0);
+console.log(maximo);
+
+
