@@ -41,3 +41,14 @@ console.log(numerosDobles);
 const marcasCoches = ["Toyota", "Honda", "Ford", "Chevrolet"]; 
 const marcasCochesSL = marcasCoches.map(marca => marca + " SL");
 console.log(marcasCochesSL);
+
+// filtro con filter para las marcas que tengan la letra a
+
+const marcasConA = marcasCoches.filter(marca => marca.includes("a") || marca.includes("A"));
+console.log(marcasConA);
+
+// con find, que imprima la primera marca  cuyo tamaño de caracteres sea mayor a 4
+
+
+const primeraMarcaLarga = marcasCoches.find(marca => marca.length > 4);
+console.log(primeraMarcaLarga);
