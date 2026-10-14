@@ -1,13 +1,12 @@
-public class Furgoneta extends Vehiculo{
-    public Furgoneta(String nombre,String marca, String color, int kilometros) {
-        super(nombre, marca,color, kilometros);
+public class Furgoneta extends Vehiculo {
 
+    public Furgoneta(String marca, int kilometros) {
+        super(marca, kilometros);
     }
 
     @Override
     public void actionByVehiculoType() {
-        System.out.printf("%s %s de color %s con %d kilometros ",
-        this.getNombre(),this.getMarca(), this.getColor(),this.getKilometros());
-
+        System.out.printf("Furgoneta %s con %d kilómetros - Transporta comida\n",
+                this.getMarca(), this.getKilometros());
     }
 }
