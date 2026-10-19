@@ -26,3 +26,17 @@ export const pedidoFamiliar = new Promise((resolve, reject) => {
         reject("No hay comida disponible");
     }
 });
+
+export async function hacerPedidoFamiliar() {
+    try {
+        const mensaje = await pedidoFamiliar;
+        console.log("pedido OK: " + mensaje);
+    } catch (error) {
+        console.log("error en el pedido: " + error);
+    }
+}
+
+export async function llamarAJson() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+  return await response.json();
+}
